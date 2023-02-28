@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import {FiSearch, FiMenu} from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 const Navbar = () => {
-    const [toggle,setToggle]=useState(false)
+    const [toggle,setToggle]=useState(true)
   return (
-    <div className=''>
+    
+    <div className='fixed w-full'>
         <div className='hidden lg:flex  py-2 px-4 items-center  border-black border-b-[1px] text-sm'>
             <div className="flex md:gap-3 lg:gap-6  flex-1 ">
                     <Link>New Arrivals</Link>
@@ -36,7 +37,7 @@ const Navbar = () => {
             </div>
            
         </div>
-        <div className={ `transition-all duration-300 flex overflow-hidden flex-col ${toggle&&'h-0 pointer-events-none '} lg:hidden ` }>
+        <div className={ `flex overflow-hidden flex-col ${toggle&&'h-0 pointer-events-none '} lg:hidden ` }>
             <div className='flex flex-col'>
             <div className="py-[1.25rem] px-3 border-b-[1px] border-black">NEW ARRIVALS</div>
             <div className="py-[1.25rem] px-3 border-b-[1px] border-black">MEN</div>
